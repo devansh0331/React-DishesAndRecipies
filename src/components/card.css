@@ -1,0 +1,45 @@
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: inherit;
+    border-radius: 10px;
+    background: linear-gradient(to right , rgb(251, 251, 251) , rgb(215, 212, 212));
+    padding: 1rem;
+    
+
+}
+.card-header{
+    font-size: 2rem;
+    font-weight: bold;
+    background: wheat;
+    margin: 1rem;
+   
+}
+
+.card-img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 5rem;
+}
+
+.card button{
+    margin-top: 1rem;
+    padding: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid red;
+    background: red;
+    color: white;
+    transition: 0.5s all ease-in-out;
+}
+
+.card button:hover{
+    background: white;
+    color: red;
+}
+
