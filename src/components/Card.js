@@ -4,9 +4,9 @@ import './card.css'
 function Card(props) {
   return (
     <div className="card">
-      <h1 className="card-header">{props.title}</h1>
+      <h1 className="card-header"> {props.title}</h1>
       <img src={props.image} className="card-img" alt=""/>
-      <button onClick={props.handleOnClick} type="">View Recipie and Details</button>
+      <a href={props.handleOnClick}><button  type="">View Recipie and Details</button></a> 
       {/* <div className="card-content">
       <span className="card-recipe"><strong>Recipie</strong> </span>
       <ol className="card-recipe">{props.recipies.map((lists , key) => {

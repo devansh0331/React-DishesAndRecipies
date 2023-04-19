@@ -5,4 +5,71 @@
     flex-wrap: wrap;
     margin: 1rem;
 }
+.form{
+    margin: 2rem auto;
+    
+    transition: 1.5s all ease-in-out;
+    
+}
+.formNoQuery{
+    margin:5rem auto  ;
+}
 
+#inp{
+    margin-top: 2rem;
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin-right: 3rem;
+    background: white;
+    border: none;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+#btn{
+    width: 10%;
+    height: 2.5rem;
+    border-radius: 5px;
+    background: red;
+    font-weight: bold;
+    color: white;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 650px) {
+    .card-div{
+      flex-direction: column;
+    }
+
+    .indi-card-div{
+        width: 90%;
+    }
+
+    .form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #btn{
+        width: 20%;
+        margin-top: 1rem;
+    }
+    #inp{
+        width: 80%;
+        margin: 1rem auto;
+    }
+    
+
+  }
+@media only screen and (max-width: 860px ) and (min-width: 650px){
+    /* .card-div{
+      flex-direction: column;
+    } */
+
+    .indi-card-div{
+        width: 45%;
+    }
+  }

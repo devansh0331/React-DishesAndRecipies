@@ -10,7 +10,7 @@ function Form() {
 
     const [recipies , setRecipies] = useState([])
 
-    const [query ,setQuery] = useState('chicken')
+    const [query ,setQuery] = useState('')
     const [search , setSearch] = useState('');
     const [onClick , setOnClick] = useState(false);
     const [recipieName , setRecipieName] = useState('');
@@ -43,28 +43,35 @@ function Form() {
       setQuery(search)
     }
   return (
+    <>
+    
+
+           
     <div>
-          <form onSubmit={getSearch}>
+          <form style={query ? {margin : "1rem auto"} : {margin : "15rem auto"} } className="form" onSubmit={getSearch}>
             
-        <input onChange={updateSearch} type="text" value={search} />
-        <button type="submit">Search</button>
+        <input id="inp" onChange={updateSearch} placeholder="Enter a dish or ingridient" type="text" value={search} />
+        <button id="btn" type="submit">Search</button>
           </form>
 
-        {!onClick && <> 
+       
         <div className="row card-div">
           
-        {recipies &&recipies.map((items,key)  =>(
+        {recipies && recipies.map((items,key)  => (
+           <> {!onClick && <> 
           <div key={key}  className="col-4 indi-card-div my-3" >
             
-          <Card  key={key} handleOnClick={handleOnClick} image={items.recipe.image}  recipies={items.recipe.ingredientLines} title={items.recipe.label}/>
-          </div>
+          <Card  key={key} handleOnClick={items.recipe.url} image={items.recipe.image}  recipies={items.recipe.ingredientLines} title={items.recipe.label}/>
+          </div></>}
+          {onClick && <><h1>Heyy</h1></>}
+          </>
+
           ))}
           </div>
-          {!recipies && <><span>No Dishes available with {query}</span></>}</>}
-
-          {onClick && <><h1>Comming Soon</h1></>}
+          {!recipies && <><span>No Dishes available with {query}</span></>}
 
     </div>
+    </>
   )
 }
 
